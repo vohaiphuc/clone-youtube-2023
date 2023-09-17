@@ -8,7 +8,8 @@ import {
 export default class TagList extends Component {
     constant = {
         minSlidePrev: 0,
-        slideStep: 100
+        slideStep: 100,
+        maxSlideNext: 1
     }
     state = {
         translateX: this.constant.minSlidePrev,
@@ -50,6 +51,11 @@ export default class TagList extends Component {
         let exceedWidth = containerWidth - tagListWidth
         return exceedWidth
     }
+    componentDidMount() {
+        this.setState({
+            maxSlideNext: this.calTagListWidth()
+        })
+    }
     render() {
         return (
             <div className='tag-container'>
@@ -62,7 +68,7 @@ export default class TagList extends Component {
                 }} className='tag-list'>
                     {this.renderButtonList()}
                 </div>
-                <div className={`tag-arrow tag-arrow-next ${this.state.translateX <= this.calTagListWidth() ? "d-none" : ""}`}>
+                <div className={`tag-arrow tag-arrow-next ${this.state.translateX <= this.state.maxSlideNext ? "d-none" : ""}`}>
                     <RightOutlined className='icon' onClick={this.handleSlideForward} />
                 </div>
             </div>
