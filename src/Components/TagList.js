@@ -7,12 +7,12 @@ import {
 
 export default class TagList extends Component {
     constant = {
-        minSlidePrev: 0,
+        slideStartPosition: 0,
         slideStep: 100,
-        maxSlideNext: 1
+        lengthDiff: 1, // length difference btw ".tag-list" and ".tag-container"
     }
     state = {
-        translateX: this.constant.minSlidePrev,
+        translateX: this.constant.slideStartPosition,
     }
     renderButtonList = () => {
         return TAG_LIST.map((item, index) => {
@@ -20,41 +20,24 @@ export default class TagList extends Component {
         })
     }
     handleSlideBackward = () => {
-        let newPos = this.state.translateX + this.constant.slideStep
-        if (newPos >= this.constant.minSlidePrev) {
-            newPos = this.constant.minSlidePrev
-        }
         this.setState({
-            translateX: newPos
+            translateX: this.state.translateX + this.constant.slideStep
         })
     }
     handleSlideForward = () => {
-        let exceedWidth = this.calTagListWidth()
-        if (exceedWidth < 0) {
-            let newPos = this.state.translateX - this.constant.slideStep
-            if (newPos <= exceedWidth) {
-                newPos = exceedWidth
-            }
-            this.setState({
-                translateX: newPos
-            })
-        }
+        this.setState({
+            translateX: this.state.translateX - this.constant.slideStep
+        })
     }
-    calTagListWidth = () => {
+    componentDidMount() {
         let tagsElem = document.querySelectorAll(".btn.btn-youtube-tag.mr-3")
         let tagListWidth = 0
         for (let i = 0; i < tagsElem.length; i++) {
             const ele = tagsElem[i];
             tagListWidth = tagListWidth + ele.offsetWidth + 16
         }
-        let containerWidth = document.querySelectorAll(".tag-container")[0].offsetWidth
-        let exceedWidth = containerWidth - tagListWidth
-        return exceedWidth
-    }
-    componentDidMount() {
-        this.setState({
-            maxSlideNext: this.calTagListWidth()
-        })
+        let tagContainerWidth = document.querySelectorAll(".tag-container")[0].offsetWidth
+        this.setState({ lengthDiff: tagContainerWidth - tagListWidth })
     }
     render() {
         return (
@@ -68,7 +51,7 @@ export default class TagList extends Component {
                 }} className='tag-list'>
                     {this.renderButtonList()}
                 </div>
-                <div className={`tag-arrow tag-arrow-next ${this.state.translateX <= this.state.maxSlideNext ? "d-none" : ""}`}>
+                <div className={`tag-arrow tag-arrow-next ${this.state.translateX <= this.state.lengthDiff ? "d-none" : ""}`}>
                     <RightOutlined className='icon' onClick={this.handleSlideForward} />
                 </div>
             </div>
