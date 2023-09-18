@@ -15,7 +15,7 @@ export default class HeaderYoutube extends Component {
     }
     render() {
         return (
-            <Row align={'middle'} className='pl-3 pr-4 header' justify={'space-between'}>
+            <>
                 <Col span={4} className='d-flex align-items-center h-100'>
                     {/* <Icon component={MenuIcon} className='mr-2 icon-hover' style={{ fontSize: "18px" }} />
                     <img src="./img/logo.svg" alt="" style={{ height: "20px" }} /> */}
@@ -31,7 +31,7 @@ export default class HeaderYoutube extends Component {
                     <Icon component={NotificationIcon} className='mx-1 icon-hover' />
                     <Avatar size={32} src='https://optimalw.com/wp-content/uploads/2015/10/sample-avatar-300x300.jpg' className='mx-3' />
                 </Col>
-            </Row>
+            </>
         )
     }
 }

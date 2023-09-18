@@ -10,6 +10,9 @@ export default class CardBody extends Component {
             <>
                 <CardVideo quantity={5} from={0} />
                 <CardVideo quantity={5} from={5} />
+                <CardVideo quantity={5} from={10} />
+                <CardVideo quantity={5} from={15} />
+                <CardVideo quantity={5} from={20} />
             </>
 
         )

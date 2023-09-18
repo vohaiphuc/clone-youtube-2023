@@ -13,7 +13,7 @@ export default class CardVideo extends Component {
     }
     render() {
         return (
-            <Row style={{ height: "520px", width: "100%" }}>
+            <Row className='mb-4 pl-3 pr-4' style={{ width: "100%" }}>
                 {this.renderVideoList()}
             </Row>
         )

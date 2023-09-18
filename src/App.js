@@ -27,13 +27,15 @@ export default class App extends Component {
 					</Col>
 				</Row>
 				<Row className='header-tag-list' justify={'end'}>
-					<HeaderYoutube />
-					<Col style={{ width: "calc(100vw - 240px)" }}>
-						<TagList className="ml-5" />
+					<Row align={'middle'} className='pl-3 pr-4 header' justify={'space-between'}>
+						<HeaderYoutube />
+					</Row>
+					<Col style={{ width: "calc(100vw - 240px - 20px)", marginRight: "20px" }}>
+						<TagList />
 					</Col>
 				</Row>
 				<div id="my-scrollbar-2" data-scrollbar style={{ width: "100vw", height: "100vh" }}>
-					<Row justify={'end'} style={{ marginTop: "116px" }}>
+					<Row justify={'end'} style={{ marginTop: "116px", paddingTop: "24px" }}>
 						<Col style={{ width: "calc(100vw - 240px)" }}>
 							<CardBody className="ml-5" />
 						</Col>
