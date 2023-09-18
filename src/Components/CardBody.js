@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 import CardVideo from './CardVideo'
 import CardShort from './CardShort'
+import { Scrollbar } from 'smooth-scrollbar-react'
 
-export default class MainBody extends Component {
+export default class CardBody extends Component {
     render() {
         return (
-            <div>
-                <CardVideo />
-                <CardShort />
-            </div>
+
+            <>
+                <CardVideo quantity={5} from={0} />
+                <CardVideo quantity={5} from={5} />
+            </>
+
         )
     }
 }

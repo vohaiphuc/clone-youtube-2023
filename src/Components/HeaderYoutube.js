@@ -15,10 +15,10 @@ export default class HeaderYoutube extends Component {
     }
     render() {
         return (
-            <Row style={{ height: "56px" }} align={'middle'} className='pl-3 pr-4' justify={'space-between'}>
+            <Row align={'middle'} className='pl-3 pr-4 header' justify={'space-between'}>
                 <Col span={4} className='d-flex align-items-center h-100'>
-                    <Icon component={MenuIcon} className='mr-2 icon-hover' style={{ fontSize: "18px" }} />
-                    <img src="./img/logo.svg" alt="" style={{ height: "20px" }} />
+                    {/* <Icon component={MenuIcon} className='mr-2 icon-hover' style={{ fontSize: "18px" }} />
+                    <img src="./img/logo.svg" alt="" style={{ height: "20px" }} /> */}
                 </Col>
                 <Col xl={10} xxl={9} className='d-flex align-items-center h-75 search-bar justify-content-end'>
                     <div className="input-prefix">{this.state.showSearchIcon ? <SearchOutlined /> : <span />}</div>

@@ -1,6 +1,6 @@
 
 import React, { Component, createElement, useState } from 'react';
-import {
+import Icon, {
     AppstoreOutlined,
     ContainerOutlined,
     DesktopOutlined,
@@ -10,9 +10,8 @@ import {
     PieChartOutlined,
 } from '@ant-design/icons';
 import { Button, Menu, Divider, ConfigProvider } from 'antd';
-import { Sidebar } from './Sidebar';
-import Scrollbar from 'smooth-scrollbar';
 import { SIDEBAR_ITEMS, SIDEBAR_FIRST } from '../constant/SidebarItems';
+import { MenuIcon } from '../constant/IconsYt';
 
 
 function getItem(label, key, icon, children, type) {
@@ -41,9 +40,13 @@ const SidebarYoutube = () => {
     return (
         <div
             style={{
-                width: 228,
+                width: "224px",
             }}
         >
+            <div className='d-flex align-items-center h-100 px-3 py-2 bg-default'>
+                <Icon component={MenuIcon} className='mr-3 icon-hover' style={{ fontSize: "18px" }} />
+                <img src="./img/logo.svg" alt="" style={{ height: "20px" }} />
+            </div>
             <Menu
                 defaultSelectedKeys={['1']}
                 mode="inline"
@@ -51,12 +54,11 @@ const SidebarYoutube = () => {
                 items={items}
                 id="my-scrollbar"
                 data-scrollbar
-                className='bg-black pr-3 ml-2'
+                className='pr-3 ml-2'
                 inlineIndent={11}
                 style={{
                     height: "calc(100vh - 56px)",
-                    overflow: "auto",
-                    paddingTop: "9px"
+                    paddingBottom: "20px",
                 }}
             />
         </div>

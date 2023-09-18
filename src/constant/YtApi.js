@@ -1,4 +1,4 @@
-const videos = [
+export const videos = [
     {
         title: "Duy nhất 14,15,18,19/9, cùng Pond’s nhận ưu đãi ngập tràn",
         duration: "0:30",
@@ -50,7 +50,7 @@ const videos = [
         url: "https://www.youtube.com/watch?v=5SObXnjzV3U",
     },
     {
-        title: "4 cách xây dựng mối quan hệ cho người hướng nội (mà không phải "gồng" hướng ngoại)",
+        title: `4 cách xây dựng mối quan hệ cho người hướng nội (mà không phải "gồng" hướng ngoại)`,
         duration: "16:17",
         thumbnail: "https://i.ytimg.com/vi/bGZ-HvwxhkY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA_aps6xUgqkzygF6yd0FbzScztrw",
         channelAvatar: "https://yt3.ggpht.com/Sp7u5kgZ-N77YqSaBgVZMehmRS0ETIS2uFGnsidHlG5kUwIezbA3Edt8WxeXQ7ksxs6C0gaz2qw=s68-c-k-c0x00ffffff-no-rj",
@@ -331,7 +331,7 @@ const videos = [
     },
 ]
 
-const shorts = [
+export const shorts = [
     {
         title: "cameraman tâm sự về trải nghiệm làm nghề, ai thích hào quang rực rỡ thì nhào vô đây làm.#Shorts",
         thumbnail: "https://i.ytimg.com/vi/REVv6BaUpfQ/oar2.jpg?sqp=-oaymwEaCJUDENAFSFXyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLBVA-l8BskL4qVgM4R7z5-YnVI3kw",
