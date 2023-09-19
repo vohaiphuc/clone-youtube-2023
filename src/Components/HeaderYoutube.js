@@ -8,10 +8,10 @@ export default class HeaderYoutube extends Component {
         showSearchIcon: false
     }
     handleShowSearhIcon = () => {
-        this.setState({ showSearchIcon: !this.state.showSearchIcon })
+        this.setState({ showSearchIcon: true })
     }
     handleHideSearhIcon = () => {
-        this.setState({ showSearchIcon: !this.state.showSearchIcon })
+        this.setState({ showSearchIcon: false })
     }
     render() {
         return (

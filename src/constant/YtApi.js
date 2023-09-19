@@ -8,6 +8,7 @@ export const videos = [
         view: "12K views",
         time: "23 hours ago",
         url: "https://www.youtube.com/watch?v=DuxbP1jZKY4",
+        verified: true
     },
     {
         title: "Nhạc Lofi Chill Top Xu Hướng 2023 Triệu View ♬ Thay Tôi Yêu Cô Ấy, Ngày Em Đẹp Nhất, Hoa Cỏ Lau",
@@ -28,6 +29,7 @@ export const videos = [
         view: "19K views",
         time: "3 months ago",
         url: "https://www.youtube.com/watch?v=FBZYmhKqBLo",
+        verified: true
     },
     {
         title: "Lofi Chill 🌼 Lofi Deep Focus 🌳 Study/Calm/Heal [ Lofi Hip Hop - Lofi Chill ]",
@@ -68,6 +70,7 @@ export const videos = [
         view: "75 views",
         time: "29 minutes ago",
         url: "https://www.youtube.com/watch?v=F627pKNUCVQ",
+        verified: true
     },
     {
         title: "Nhạc Trẻ 8x9x - Những Bản Nhạc Lofi 8x9x Nhẹ Nhàng | Nhạc Lofi 8x9x Hay Nhất Đời Đầu",
@@ -98,6 +101,7 @@ export const videos = [
         view: "200 views",
         time: "6 hours ago",
         url: "https://www.youtube.com/watch?v=CRCEU1Rec7M",
+        live: true
     },
     {
         title: "Hí hửng m.u.a ghế bệt tựa lưng và cái kết | Quân Quân đây nè",
@@ -108,6 +112,7 @@ export const videos = [
         view: "20K views",
         time: "Streamed 1 day ago",
         url: "https://www.youtube.com/watch?v=lfPA0nC1xbc",
+        verified: true
     },
     {
         title: "1 mét 48 khi giận",
@@ -128,6 +133,7 @@ export const videos = [
         view: "732K views",
         time: "9 months ago",
         url: "https://www.youtube.com/watch?v=yKYIrNgTLOA",
+        live: true
     },
     {
         title: "Cậu bé 2k1 Phá kỷ lục chống đẩy thế giới 30s #shorts",
@@ -148,6 +154,7 @@ export const videos = [
         view: "",
         time: "29 minutes ago",
         url: "https://www.youtube.com/watch?v=4QUziibVcAA",
+        verified: true
     },
     {
         title: "Ballad Nhẹ Nhàng - Nhạc Ballad Nhẹ Nhàng - Nhac chill nhe nhang hay nhat",
@@ -168,6 +175,7 @@ export const videos = [
         view: "3.2M views",
         time: "1 year ago",
         url: "https://www.youtube.com/watch?v=C2oDdIIzVME",
+        verified: true
     },
     {
         title: "EDM TikTok Hay 2023 ♫ BXH Nhạc Trẻ Remix Hay Nhất Hiện Nay - Top 15 Bản EDM TikTok Hot Nhất 2023",

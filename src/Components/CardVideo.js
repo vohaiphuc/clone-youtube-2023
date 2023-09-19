@@ -8,7 +8,7 @@ export default class CardVideo extends Component {
         let { quantity, from } = this.props
         let videoList = videos.slice(from, from + quantity)
         return videoList.map((video, index) => {
-            return <CardVideoItem video={video} key={index}></CardVideoItem>
+            return <CardVideoItem video={video} key={index} quantity={quantity}></CardVideoItem>
         })
     }
     render() {

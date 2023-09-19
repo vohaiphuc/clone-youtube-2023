@@ -30,6 +30,16 @@ export const ShortIcon = () => (
     <svg fill="currentColor" height={24} viewBox="0 0 24 24" width={24} focusable="false" style={{ pointerEvents: 'none', display: 'block', width: '100%', height: '100%' }}><path d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z" /></svg>
 )
 
+export const ShortIconColor = () => (
+    <svg width={24} height={24} viewBox="0 0 24 24" focusable="false" style={{ pointerEvents: 'none', display: 'block', width: '100%', height: '100%' }}>
+        <g>
+            <path d="M17.77,10.32l-1.2-.5L18,9.06a3.74,3.74,0,0,0-3.5-6.62L6,6.94a3.74,3.74,0,0,0,.23,6.74l1.2.49L6,14.93a3.75,3.75,0,0,0,3.5,6.63l8.5-4.5a3.74,3.74,0,0,0-.23-6.74Z" fill="red" />
+            <polygon points="10 14.65 15 12 10 9.35 10 14.65" fill="#fff" />
+        </g>
+    </svg>
+
+)
+
 export const SubcriptionIcon = () => (
     <svg fill="currentColor" enableBackground="new 0 0 24 24" height={24} viewBox="0 0 24 24" width={24} focusable="false" style={{ pointerEvents: 'none', display: 'block', width: '100%', height: '100%' }}><path d="M10 18v-6l5 3-5 3zm7-15H7v1h10V3zm3 3H4v1h16V6zm2 3H2v12h20V9zM3 10h18v10H3V10z" /></svg>
 )
@@ -93,3 +103,12 @@ export const NewsIcon = () => (
 export const SportsIcon = () => (
     <svg fill="currentColor" height={24} viewBox="0 0 24 24" width={24} focusable="false" style={{ pointerEvents: 'none', display: 'block', width: '100%', height: '100%' }}><path d="M18 5V2H6v3H3v6l3.23 1.61c.7 2.5 2.97 4.34 5.69 4.38L8 19v3h8v-3l-3.92-2.01c2.72-.04 4.99-1.88 5.69-4.38L21 11V5h-3zM6 11.38l-2-1V6h2v5.38zM15 21H9v-1.39l3-1.54 3 1.54V21zm2-10c0 2.76-2.24 5-5 5s-5-2.24-5-5V3h10v8zm3-.62-2 1V6h2v4.38z" /></svg>
 )
+
+export const LiveIcon = () => (
+    <svg fill="currentColor" height={16} viewBox="0 0 16 16" width={16} focusable="false" style={{ pointerEvents: 'none', display: 'block', width: '100%', height: '100%' }}><path d="M9 8c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1Zm1.11 2.13.71.71C11.55 10.11 12 9.11 12 8c0-1.11-.45-2.11-1.18-2.84l-.71.71c.55.55.89 1.3.89 2.13 0 .83-.34 1.58-.89 2.13Zm-4.93.71.71-.71C5.34 9.58 5 8.83 5 8c0-.83.34-1.58.89-2.13l-.71-.71C4.45 5.89 4 6.89 4 8c0 1.11.45 2.11 1.18 2.84Zm7.05 1.41.71.71C14.21 11.69 15 9.94 15 8s-.79-3.69-2.06-4.96l-.71.71C13.32 4.84 14 6.34 14 8c0 1.66-.68 3.16-1.77 4.25Zm-9.17.71.71-.71C2.68 11.16 2 9.66 2 8c0-1.66.68-3.16 1.77-4.25l-.71-.71C1.79 4.31 1 6.06 1 8s.79 3.69 2.06 4.96Z" /></svg>
+)
+
+export const VerifyIcon = () => (
+    <svg fill="currentColor" height={24} viewBox="0 0 24 24" width={24} focusable="false" style={{ pointerEvents: 'none', display: 'block', width: '100%', height: '100%' }}><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z" /></svg>
+)
+
