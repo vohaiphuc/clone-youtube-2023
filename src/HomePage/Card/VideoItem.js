@@ -1,11 +1,11 @@
 import { Image, Col, Card, Row, Avatar } from 'antd'
 import Icon from '@ant-design/icons';
 import React, { Component } from 'react'
-import { LiveIcon, VerifyIcon } from '../constant/IconsYt';
+import { LiveIcon, VerifyIcon } from '../../constant/IconsYt';
 
 const { Meta } = Card;
 
-export default class CardVideoItem extends Component {
+export default class VideoItem extends Component {
     render() {
         let { video, quantity } = this.props
         let colWidth = Math.floor((100 / quantity) * 100) / 100
@@ -14,7 +14,6 @@ export default class CardVideoItem extends Component {
         return (
             <Col style={{ width: `calc(${colWidth}%)` }}>
                 <Card
-                    hoverable
                     bordered={false}
                     style={{ width: "100%" }}
                     className='bg-default p-0'

@@ -1,0 +1,50 @@
+/* Menu */
+.ant-menu {
+    background-color: transparent;
+    color: white;
+
+    .ant-menu-item-selected,
+    .ant-menu-item-active {
+        background: var(--secondary) !important;
+    }
+
+    .ant-menu-item-divider {
+        border-color: var(--color-border);
+    }
+    .ant-menu-title-content {
+        margin-left: 25px !important;
+    }
+    .ant-menu-item-group .ant-menu-item-group-title {
+        font-size: 16px;
+        color: #fff;
+    }
+
+    .scrollbar-thumb::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 3px;
+        background-color: var(--bg-dark);
+    }
+
+    &:hover .scrollbar-thumb::before {
+        background-color: transparent;
+    }
+}
+
+// Scrollbar
+.scrollbar-track {
+    background-color: transparent !important;
+
+    &.scrollbar-track-y {
+        width: 10px !important;
+    }
+
+    .scrollbar-thumb {
+        position: relative;
+        background-color: var(--secondary-lighter-5) !important;
+    }
+}

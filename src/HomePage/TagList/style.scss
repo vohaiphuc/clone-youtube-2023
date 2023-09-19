@@ -1,0 +1,100 @@
+.tag-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.tag-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 11px;
+    background: var(--bg-dark);
+    z-index: 1;
+    width: 36px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+        position: relative;
+        width: inherit;
+        height: inherit;
+        border-radius: 50%;
+        padding: inherit;
+    }
+
+    &.tag-arrow-prev {
+        left: 0;
+        .icon::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: inherit;
+            height: inherit;
+            transform: translateX(100%);
+            // background: red;
+            background: linear-gradient(
+                to right,
+                #0f0f0f 20%,
+                rgba(33, 33, 33, 0) 80%
+            );
+            z-index: 3;
+        }
+    }
+
+    &.tag-arrow-next {
+        right: 0;
+        .icon::after {
+            position: absolute;
+            content: "";
+            right: 0;
+            top: 0;
+            width: inherit;
+            height: inherit;
+            transform: translateX(-100%);
+            // background: red;
+            background: linear-gradient(
+                to left,
+                #0f0f0f 20%,
+                rgba(33, 33, 33, 0) 80%
+            );
+            z-index: 3;
+        }
+    }
+
+    &:hover .icon {
+        background: hsl(0, 0%, 18.82%);
+        padding: inherit;
+    }
+}
+
+.tag-list {
+    display: flex;
+    align-items: center;
+
+    .btn-youtube-tag {
+        background-color: var(--secondary);
+        color: #fff;
+        height: 32px;
+        font-size: 14px;
+        line-height: 15px;
+        text-wrap: nowrap;
+
+        &:hover {
+            background: var(--secondary-lighter-2);
+            color: #fff;
+        }
+
+        &:focus {
+            background: #fff;
+            color: #000;
+            box-shadow: none;
+        }
+    }
+}

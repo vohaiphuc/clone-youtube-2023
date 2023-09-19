@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import { shorts } from '../constant/YtApi'
-import CardShortItem from './CardShortItem'
+import { shorts } from '../../constant/YtApi'
+import ShortItem from './ShortItem'
 import { Col, Row } from 'antd'
 import Icon from '@ant-design/icons';
-import { ShortIconColor } from '../constant/IconsYt'
+import { ShortIconColor } from '../../constant/IconsYt'
 
-export default class CardShort extends Component {
+export default class Card extends Component {
     renderShortList = () => {
         let { quantity, from } = this.props
         let shortList = shorts.slice(from, from + quantity)
         return shortList.map((video, index) => {
-            return <CardShortItem video={video} key={index} quantity={quantity} />
+            return <ShortItem video={video} key={index} quantity={quantity} />
         })
     }
     render() {

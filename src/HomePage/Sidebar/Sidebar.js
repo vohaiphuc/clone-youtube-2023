@@ -1,18 +1,10 @@
 
 import React, { Component, createElement, useState } from 'react';
-import Icon, {
-    AppstoreOutlined,
-    ContainerOutlined,
-    DesktopOutlined,
-    MailOutlined,
-    MenuFoldOutlined,
-    MenuUnfoldOutlined,
-    PieChartOutlined,
-} from '@ant-design/icons';
+import Icon from '@ant-design/icons';
 import { Button, Menu, Divider, ConfigProvider } from 'antd';
-import { SIDEBAR_ITEMS, SIDEBAR_FIRST } from '../constant/SidebarItems';
-import { MenuIcon } from '../constant/IconsYt';
-
+import { SIDEBAR_ITEMS, SIDEBAR_FIRST } from '../../constant/SidebarItems';
+import { MenuIcon } from '../../constant/IconsYt';
+import "./style.scss"
 
 function getItem(label, key, icon, children, type) {
     return {
@@ -36,7 +28,7 @@ SIDEBAR_ITEMS.forEach(({ name, icon }, index) => {
     }
 })
 
-const SidebarYoutube = () => {
+const Sidebar = () => {
     return (
         <div
             style={{
@@ -52,7 +44,7 @@ const SidebarYoutube = () => {
                 mode="inline"
                 theme="dark"
                 items={items}
-                id="my-scrollbar"
+                id="sidebar-scrollbar"
                 data-scrollbar
                 className='pr-3 ml-2'
                 inlineIndent={11}
@@ -64,4 +56,4 @@ const SidebarYoutube = () => {
         </div>
     );
 };
-export default SidebarYoutube;
+export default Sidebar;

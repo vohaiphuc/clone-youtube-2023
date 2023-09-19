@@ -1,18 +1,20 @@
 import React, { Component } from 'react'
-import { TAG_LIST } from '../constant/TagList'
+import { TAG_LIST } from '../../constant/TagListItems'
 import {
     LeftOutlined,
     RightOutlined
 } from '@ant-design/icons';
+import "./style.scss"
+import { Col } from 'antd';
 
 export default class TagList extends Component {
-    constant = {
+    default = {
         slideStartPosition: 0,
         slideStep: 100,
         lengthDiff: 1, // length difference btw ".tag-list" and ".tag-container"
     }
     state = {
-        translateX: this.constant.slideStartPosition,
+        translateX: this.default.slideStartPosition,
     }
     renderButtonList = () => {
         return TAG_LIST.map((item, index) => {
@@ -21,12 +23,12 @@ export default class TagList extends Component {
     }
     handleSlideBackward = () => {
         this.setState({
-            translateX: this.state.translateX + this.constant.slideStep
+            translateX: this.state.translateX + this.default.slideStep
         })
     }
     handleSlideForward = () => {
         this.setState({
-            translateX: this.state.translateX - this.constant.slideStep
+            translateX: this.state.translateX - this.default.slideStep
         })
     }
     componentDidMount() {
@@ -41,12 +43,11 @@ export default class TagList extends Component {
     }
     render() {
         return (
-            <div className='tag-container'>
+            <Col className='tag-container'>
                 <div className={`tag-arrow tag-arrow-prev ${this.state.translateX >= 0 ? "d-none" : ""}`}>
                     <LeftOutlined className='icon' onClick={this.handleSlideBackward} />
                 </div>
                 <div style={{
-                    marginTop: "13px",
                     transform: "translateX(" + this.state.translateX + "px)"
                 }} className='tag-list'>
                     {this.renderButtonList()}
@@ -54,7 +55,7 @@ export default class TagList extends Component {
                 <div className={`tag-arrow tag-arrow-next ${this.state.translateX <= this.state.lengthDiff ? "d-none" : ""}`}>
                     <RightOutlined className='icon' onClick={this.handleSlideForward} />
                 </div>
-            </div>
+            </Col>
         )
     }
 }

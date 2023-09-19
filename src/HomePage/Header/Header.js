@@ -1,9 +1,10 @@
 import { Col, Row, Input, Avatar } from 'antd'
 import React, { Component } from 'react'
 import Icon, { MenuOutlined, SearchOutlined } from '@ant-design/icons';
-import { CreateVideoIcon, MenuIcon, MicrophoneIcon, NotificationIcon, SearchIcon } from '../constant/IconsYt';
+import { CreateVideoIcon, MenuIcon, MicrophoneIcon, NotificationIcon, SearchIcon } from '../../constant/IconsYt';
+import "./style.scss"
 
-export default class HeaderYoutube extends Component {
+export default class Header extends Component {
     state = {
         showSearchIcon: false
     }
@@ -17,10 +18,8 @@ export default class HeaderYoutube extends Component {
         return (
             <>
                 <Col span={4} className='d-flex align-items-center h-100'>
-                    {/* <Icon component={MenuIcon} className='mr-2 icon-hover' style={{ fontSize: "18px" }} />
-                    <img src="./img/logo.svg" alt="" style={{ height: "20px" }} /> */}
                 </Col>
-                <Col xl={10} xxl={9} className='d-flex align-items-center h-75 search-bar justify-content-end'>
+                <Col xl={10} xxl={9} className='d-flex align-items-center search-bar justify-content-end'>
                     <div className="input-prefix">{this.state.showSearchIcon ? <SearchOutlined /> : <span />}</div>
                     <Input size="large" placeholder="Search" className={`search-input ${this.state.showSearchIcon ? "selecting" : ""}`} onClick={this.handleShowSearhIcon} onBlur={this.handleHideSearhIcon} />
                     <Icon component={SearchIcon} className='i-search mr-3' />

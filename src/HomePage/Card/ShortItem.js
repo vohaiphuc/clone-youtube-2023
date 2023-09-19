@@ -2,7 +2,7 @@ import { Card, Col, Image } from 'antd'
 import Meta from 'antd/es/card/Meta'
 import React, { Component } from 'react'
 
-export default class CardShortItem extends Component {
+export default class ShortItem extends Component {
     render() {
         let { quantity, video } = this.props
         let colWidth = Math.floor((100 / quantity) * 100) / 100

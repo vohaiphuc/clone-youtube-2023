@@ -1,0 +1,77 @@
+/* Body Cart */
+.video-list {
+    .ant-card-body {
+        padding: 0 12px;
+    }
+
+    .card-video-thumbnail {
+        height: 170px;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 12px;
+        position: relative;
+    }
+
+    .card-video-duration {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        background: var(--bg-dark);
+        color: #fff;
+        padding: 0 5px;
+        border-radius: 5px;
+        font-size: 90%;
+        font-weight: 500;
+    }
+
+    .card-video-title {
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+
+        &:hover {
+            color: inherit;
+            text-decoration: inherit;
+        }
+    }
+
+    .card-video-verify {
+        color: #f1f1f18a;
+        width: 14px;
+    }
+
+    .card-view-seperator::after {
+        content: "•";
+        margin: 0 4px;
+    }
+
+    .card-sub-info {
+        color: #f1f1f18a;
+    }
+
+    .card-video-live {
+        background: rgba(204, 0, 0, 0.9);
+        color: #fff;
+        border-radius: 3px;
+        width: 56px;
+        padding: 0 3px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+
+/* Card short */
+.card-short {
+    width: calc(100vw - 240px - 30px);
+    border-top: 5px solid var(--color-border);
+    border-bottom: 5px solid var(--color-border);
+
+    .ant-card-meta-title {
+        color: #fff;
+    }
+
+    .ant-card-meta-description {
+        color: #f1f1f18a;
+    }
+}

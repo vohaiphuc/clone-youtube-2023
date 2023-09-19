@@ -1,47 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import Header from './Components/Header';
-import { Navbar } from './Components/Navbar';
-import { Sidebar } from './Components/Sidebar';
-import HeaderYoutube from './Components/HeaderYoutube';
-import SidebarYoutube from './Components/SidebarYoutube';
-import Scrollbar from 'smooth-scrollbar';
+import './App.scss';
 import React, { Component } from 'react'
-import TagList from './Components/TagList';
-import { Col, Row } from 'antd';
-import CardBody from './Components/CardBody';
-
-
+import HomePage from './HomePage/HomePage';
 
 export default class App extends Component {
-	componentDidMount() {
-		Scrollbar.init(document.querySelector('#my-scrollbar'), { alwaysShowTracks: true });
-		Scrollbar.init(document.querySelector('#my-scrollbar-2'), { alwaysShowTracks: true });
-	}
 	render() {
 		return (
-			<div className='bg-black'>
-				<Row>
-					<Col style={{ position: "fixed", left: "0", top: "0", zIndex: 2, width: "240px" }}>
-						<SidebarYoutube />
-					</Col>
-				</Row>
-				<Row className='header-tag-list' justify={'end'}>
-					<Row align={'middle'} className='pl-3 pr-4 header' justify={'space-between'}>
-						<HeaderYoutube />
-					</Row>
-					<Col style={{ width: "calc(100vw - 240px - 20px)", marginRight: "20px" }}>
-						<TagList />
-					</Col>
-				</Row>
-				<div id="my-scrollbar-2" data-scrollbar style={{ width: "100vw", height: "100vh" }}>
-					<Row justify={'end'} style={{ marginTop: "116px", paddingTop: "24px" }}>
-						<Col style={{ width: "calc(100vw - 240px)" }}>
-							<CardBody className="ml-5" />
-						</Col>
-					</Row>
-				</div>
-			</div>
+			<HomePage />
 		);
 	}
 }
